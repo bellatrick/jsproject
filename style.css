@@ -1,0 +1,330 @@
+/* .answers{
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+ */
+body{
+     background: linear-gradient(to right,#6C3772,#0E0728, black); 
+    color: #fff;
+    text-align: center;
+   
+}
+.score{
+    color: white;
+    font-size: 20px;
+    float: right;
+    margin-right: 30px;
+    margin-top: -320px;
+}
+.money{ 
+     border: 4px dotted #D0A400;
+    background-color: #0E0728;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+img{
+    margin: 0px auto;
+}
+.container{
+   
+    text-align: center;
+}
+.question{
+    padding: 12px;
+    border: 4px solid #318FE1;
+    border-radius: 15px;
+    width:49%;
+    background: linear-gradient(to right,#0E0728, black);
+    margin: 0 auto;
+    margin-top: -50px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+}
+.card{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 160px;
+    
+}
+.answers{
+    display: grid;
+  grid-template-columns: repeat(2, auto);
+   justify-content: center;
+   align-items: center;
+   
+    
+}
+.answer{
+    border: 3px solid #318FE1;
+    padding: 10px;
+    background-color: #0E0729;
+    border-radius: 15px;
+    width:100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    margin: 10px auto;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.correct{
+    background-color: green
+}
+.wrong{
+    background-color: red;
+    color: white;
+}
+.answer:hover{
+border:  2px solid white;
+color: wheat;
+opacity: 0.9;
+}
+
+.start-game{
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: monospace;
+    border: 5px solid #6258AC;
+    background-color: #2D255F;
+    padding: 14px;
+    width: 10%;
+    margin-top: 160px;
+    margin: 160px  auto;
+    cursor: pointer;
+    
+}
+.start-game:hover{
+    background-color: #0E0728;
+    border: 3px dotted #D0A400;
+}
+.next-question{
+    border-radius: 30px;
+    font-size: 12px;
+    background-color: #D0A400;
+    padding: 12px;
+    width: 10%;
+    font-weight: bolder;
+    color: black;
+    margin-top: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 16px auto;
+    cursor: pointer;
+}
+.scoretext{
+    font-family: cursive;
+}
+.next-question:hover{
+    border: 1px solid #D0A400;
+    font-weight: 900;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif
+}
+.game-over, .replay, .winner, .earning{
+    border-radius: 30px;
+    font-size: 18px;
+   
+    color: white;
+    font-family: monospace;
+    font-weight: bold;
+    border: 5px solid #6258AC;
+    background-color: #2D255F;
+    padding: 15px;
+    width: 17%;
+    margin-top: 150px;
+    margin-left: 40%;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+.earnings{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    padding:4px;
+
+}
+.hexagon{
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    width: 172.28px;
+    height: 72.28px;
+    transform: rotate(-30deg) skewX(30deg) scaleY(.866);
+}
+.hexagon::before{
+    position: absolute;
+    right: 6.7%;
+    bottom: 0;
+    left: 6.7%;
+    top: 0;
+    transform: scaleY(1.155) skewY(-30deg) rotate(30deg);
+    content: '';
+}
+
+.earn{
+    margin: 0px;
+    font-size: 15px;
+    border: 1px solid #D0A400;
+    color: #D0A400;
+    border-radius: 10px;
+    background-color: #0E0728;
+    font-family:-apple-system, BlinkMau, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.active{
+     background-color:  #D0A400;
+     color: black;
+     font-weight: bold;
+}
+.special{
+  background-color:#524893;
+
+}
+.replay{
+    margin-top: 60px;
+}
+.false{
+    background-color: #D0A400;
+    color: black;
+    font-weight: bold;
+}
+.game-over:hover, .replay:hover{
+    background-color: #0e0728;
+    border: 2px dotted #D0A400;
+    
+}
+.hide{
+    display: none;
+}
+.blink{
+    animation: blink 0.7s steps(1, end) infinite;
+}
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+
+}
+opt{box-sizing: border-box;
+     /* padding-left: 10px !important; */
+     display: flex;
+     width: 230px !important;
+     justify-content:flex-start;
+}
+.earn-5000, .earn-10000{
+    color: white;
+}
+
+.lifelinepara{
+   cursor: pointer;
+   font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+}
+/* .fifty, .callafriend{
+    margin-left: -30px;
+} */
+.lifelines img{
+    width: 50px;
+    height: 50px;
+    border-radius: 79px;
+}
+.timer{
+    width: 45px;
+    height: 45px;
+    border-radius: 79px;
+    border: 3px solid #318FE1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19;
+    font-weight: bold;
+    font-family: cursive;
+}
+.callafriendans{
+    width: 40%;
+    position: relative;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #0E0728;
+    border: 2px dotted #D0A400;
+    z-index: 10;
+}
+.callafriendans img{
+    border-radius: 100%;
+    width: 100px;
+    display: block;
+    height: 100px;
+    margin: 20px auto;
+}
+ans{
+    font-family: cursive;
+}
+.callafriendans .cancel{
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    color: #D0A400;
+    right: 19px;
+    font-size: 20px;
+    font-family: cursive;
+}
+.callafriendans .cancel:hover{
+    color: #fff;
+}
+.callafriendans p{
+    font-size: 18px;
+    font-family: cursive;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    z-index: 5;
+  }
+.lifelines{
+    border: 3px solid #318FE1;
+    border-radius: 20px;
+    padding: 5px;
+    /* float: left; */
+    display: grid;
+    width: 270px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 90px);
+    background: linear-gradient(to right,#0E0728, black);
+}
+/* .timer{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-left: 20px;
+    margin-top: -90px;
+    border-radius: 10%;
+    border: 4px solid #6258AC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: cursive;
+    float: left;
+    clear: both;
+    background-color: #0E0728;
+    font-size: 18px;
+} */
+.hidden{
+    display: none;
+}
+.hid{
+    display: none;
+}
