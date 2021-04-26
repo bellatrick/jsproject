@@ -367,6 +367,7 @@ ans{
 }
 @media (max-width:414px){
     .question{margin-left: -100px;
+        width: 170px;
     }
     .earnings{
         display: none;

@@ -484,13 +484,14 @@ function setTime() {
     intervalId= setInterval(() => {
       let interval = Math.floor((30000 + currentTime - new Date().getTime())/ 1000)
     timer.textContent=interval
-        if(interval===0) {
+        if(interval<0) {
+            clearInterval(intervalId)
             timer.classList.add('hid')
             lifelines.classList.add('hidden')
             container.classList.add('hide')
            gameOver.classList.remove('hide')
             replay.classList.remove('hide')
-            clearInterval(intervalId)
+           
             if( score<10000 ) {
             gameOver.textContent = `Sorry you lost the game, you have earned ${score} points`}  
         } else if(score==10000) {
