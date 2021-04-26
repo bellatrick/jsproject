@@ -36,6 +36,7 @@ img{
     padding: 12px;
     border: 4px solid #318FE1;
     border-radius: 15px;
+    /* min-width: 100%; */
     width:49%;
     background: linear-gradient(to right,#0E0728, black);
     margin: 0 auto;
@@ -327,4 +328,57 @@ ans{
 }
 .hid{
     display: none;
+}
+@media (max-width:768px) {
+    .score{
+        position: relative;
+        left: 20px;   
+        max-width: 19%; 
+        margin-left: 20px;
+    }
+    .game-over, .replay{
+        width: 40%;
+        position: relative;
+        right: 60px;
+        font-size: 16px;
+    }
+    .start-game{
+        width: 25%;
+    }
+    .earn{
+        font-size: 11px;
+    }
+    .lifelines{
+        max-width: 50%;
+    }
+    opt{
+        width: 130px !important;
+    }
+    .card{
+        max-width: 100%;
+    }
+  .question{
+      margin: 0 auto;
+      width: 190px;
+  }
+    .question, .answer{
+        font-size: 12px;
+    }
+}
+@media (max-width:414px){
+    .question{margin-left: -100px;
+    }
+    .earnings{
+        display: none;
+    }
+    opt{
+        width: 100px !important;
+    }
+    .lifelines{
+        grid-template-columns: repeat(3, 60px);
+    }
+    .answer{
+        position: relative;
+        left: -80px;
+    }
 }

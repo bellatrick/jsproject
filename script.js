@@ -144,7 +144,7 @@ const selectedOption = e.target
         replay.classList.remove('hide')
         
     }
- Array.from(answer.children).forEach(opt => { setStatus(opt, opt.dataset.correct,) })
+ Array.from(answer.children).forEach(opt => { setStatus(opt, opt.dataset.correct) })
 }
 }
 function setStatus(element, correct) {
@@ -478,45 +478,19 @@ function friendReset() {
 callafriendans.removeChild(callafriendans.lastElementChild)
      
    }
-// replay.addEventListener('click', function () {
-//     playAudio('lets_play')
-//     check=[]
-//     callnum=true
-//     fiftynum=true
-//     winner.classList.add('hide')
-//     container.classList.remove('hide')
-//     gameOver.classList.add('hide')
-//     replay.classList.add('hide')
-//     reset()
-//     document.querySelector(`.earn-${score}`).classList.remove('active')
-//        score = 0
-//        money.textContent = `${score} `
-//        document.querySelector(`.earn-${score}`).classList.add('active')
-//      showQuiz()
-//     document.querySelector(`.earn-10000`).classList.remove('active')
-//     clicked= false
-//     callafriend.classList.remove('hide')
-//     callcanceled.classList.add('hide')
-//     fiftyfifty.classList.remove('hide')
-//     fiftycanceled.classList.add('hide')
-//     lifelines.classList.remove('hidden')
-//     timer.classList.remove('hid')
-//     friendReset() 
-// })
 
 function setTime() {
     currentTime= new Date().getTime()
     intervalId= setInterval(() => {
       let interval = Math.floor((30000 + currentTime - new Date().getTime())/ 1000)
     timer.textContent=interval
-        if(interval==0) {
-         
-            clearInterval(intervalId)
+        if(interval===0) {
             timer.classList.add('hid')
             lifelines.classList.add('hidden')
             container.classList.add('hide')
            gameOver.classList.remove('hide')
             replay.classList.remove('hide')
+            clearInterval(intervalId)
             if( score<10000 ) {
             gameOver.textContent = `Sorry you lost the game, you have earned ${score} points`}  
         } else if(score==10000) {

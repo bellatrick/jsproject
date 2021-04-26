@@ -10,19 +10,20 @@
 </head>
 
 <body>
-   
+
     <h1 class="logo"><img src="who-wants-to-be-a-millionaire.svg" width="140px" alt=""></h1>
-    
+
     <div class="lifelines hidden">
         <div class="timer hid"></div>
         <div class="fifty hide"><img src="fiftyfifty.png" width="70px" height="40px" alt=""></div>
         <div class="fiftycanceled hide"><img src="fiftycanceled.png" width="70px" height="40px" alt=""> </div>
         <div class="callafriend hide"><img src="callafriend.png" width="70px" height="40px" alt=""> </div>
-        <div class="callafriendcanceled hide"><img src="phoneafriendcanceled.png" width="70px" height="40px" alt=""> </div>
+        <div class="callafriendcanceled hide"><img src="phoneafriendcanceled.png" width="70px" height="40px" alt="">
+        </div>
     </div>
-   
+
     <div class="container hide">
-       
+
         <div class="score">
             <p class="scoretext">Points</p>
             <p class="money">0</p>
@@ -39,7 +40,7 @@
                 <p class="earn earn-1000">$500</p>
                 <p class="earn earn-0">0</p>
             </div>
-           
+
         </div>
 
         <div class="card">
@@ -47,20 +48,25 @@
             <div class="answers"> </div>
         </div>
     </div>
-    <div class="start">
-        <div class="start-game">Start Game</div>
+    <div>
+        <div class="start">
+            <div class="start-game">Start Game</div>
+        </div>
+        <div class="next-question hide">Next Question</div>
+
+        <div class="game-over hide">Sorry you lost the game</div>
+        <div class="winner hide">Congratulations, you are now a millionaire</div>
+        <a href="index.html">
+            <div class="replay hide">Restart</div>
+        </a>
+        <div class="callafriendans hide">
+            <p>Albert Einstein</p>
+            <div class="cancel">X</div>
+            <img src="albert.jpeg" alt="">
+        </div>
+        <div class="overlay hide"></div>
     </div>
-    <div class="next-question hide">Next Question</div>
-   
-    <div class="game-over hide">Sorry you lost the game</div>
-    <div class="winner hide">Congratulations, you are now a millionaire</div>
-   <a href="index.html"> <div class="replay hide">Restart</div></a>
-<div class="callafriendans hide">
-    <p>Albert Einstein</p>
-    <div class="cancel">X</div>
-    <img src="albert.jpeg"  alt="">
-</div>
-<div class="overlay hide"></div>
+
 
 </body>
 <script src="script.js"></script>
