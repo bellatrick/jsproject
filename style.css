@@ -255,7 +255,7 @@ opt{box-sizing: border-box;
     position: relative;
     border-radius: 30px;
     padding: 20px;
-    margin: 0 auto;
+    margin: -400px auto 0 auto;
     background-color: #0E0728;
     border: 2px dotted #D0A400;
     z-index: 10;
@@ -306,23 +306,6 @@ ans{
     grid-template-columns: repeat(3, 90px);
     background: linear-gradient(to right,#0E0728, black);
 }
-/* .timer{
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    margin-left: 20px;
-    margin-top: -90px;
-    border-radius: 10%;
-    border: 4px solid #6258AC;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-family: cursive;
-    float: left;
-    clear: both;
-    background-color: #0E0728;
-    font-size: 18px;
-} */
 .hidden{
     display: none;
 }
@@ -335,6 +318,10 @@ ans{
         left: 20px;   
         max-width: 19%; 
         margin-left: 20px;
+    }
+    .winner{
+        margin: 0 auto;
+        min-width: 200px;
     }
     .game-over, .replay{
         width: 40%;
@@ -365,21 +352,46 @@ ans{
         font-size: 12px;
     }
 }
+
 @media (max-width:414px){
-    .question{margin-left: -100px;
-        width: 170px;
+ 
+    .callafriendans{
+        margin-top: -200px;
+    }
+    .card{
+        position: absolute;
+        left: -90px;
     }
     .earnings{
         display: none;
     }
-    opt{
-        width: 100px !important;
-    }
+  
     .lifelines{
         grid-template-columns: repeat(3, 60px);
     }
-    .answer{
-        position: relative;
-        left: -80px;
+  
+}
+@media (max-width:410px){
+ 
+   .game-over{
+       margin-top: -10px;
+   }
+   .card{
+    position: absolute;
+    left: -120px;
+}
+   .lifelines{
+   
+    grid-template-columns: repeat(3, 52px);
+}
+ .timer{
+    width: 40px;
+}
+
+}
+@media (max-width:375px){
+    .card{
+      
+        left: -100px;
     }
 }

@@ -31,25 +31,6 @@ let newArray
 let removed
 let check=[]
 
-// function ranNum() {
-//     currentQuestion = Math.floor(Math.random()*totalQuestions.length); 
-//     check.push(currentQuestion)
-       
-//     let p= check.includes(currentQuestion)
-//     for(let i=0; i<check.length; i++) {
-//         currentQuestion = check[i]
-//          if (p) {
-//             currentQuestion = Math.floor(Math.random()*totalQuestions.length); }
-//        else if(!p)
-//             { currentQuestion=check[i]
-//             // check.push(currentQuestion)
-//         } 
-          
-//     } 
-//    console.log(currentQuestion);
-//    console.log(check);
-//     return currentQuestion  
-//   }
 function playAudio(sound) {
  let audio= new Audio(`${sound}.mp3`)
  audio.play()
@@ -187,7 +168,6 @@ function callStatus(element, correct) {
         let ans = document.createElement('ans')
         ans.innerText = `The correct answer is "${element.textContent}"`
         callafriendans.appendChild(ans)
-        container.classList.add('hide')
         callafriendans.classList.remove('hide')
         overlay.classList.remove('hide')
       
@@ -200,7 +180,7 @@ callafriend.addEventListener('click', function() {
   
 })
 function callHide() {
-    container.classList.remove('hide')
+   
     callafriendans.classList.add('hide')
     overlay.classList.add('hide')
 }
@@ -484,18 +464,21 @@ function setTime() {
     intervalId= setInterval(() => {
       let interval = Math.floor((30000 + currentTime - new Date().getTime())/ 1000)
     timer.textContent=interval
-        if(interval<0) {
+        if(interval<0 && score<10000) {
             clearInterval(intervalId)
-            timer.classList.add('hid')
-            lifelines.classList.add('hidden')
             container.classList.add('hide')
+            timer.classList.add('hide')
+            lifelines.classList.add('hidden')
            gameOver.classList.remove('hide')
             replay.classList.remove('hide')
            
             if( score<10000 ) {
+            clearInterval(intervalId)
             gameOver.textContent = `Sorry you lost the game, you have earned ${score} points`}  
-        } else if(score==10000) {
+        } else if(score===10000) {
+            clearInterval(intervalId)
             gameOver.classList.add('hide')
+            replay.classList.remove('hide')
         }
       }, 1000)
 }
